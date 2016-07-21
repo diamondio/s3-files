@@ -60,7 +60,8 @@ s3Files.createFileStream = function (keyStream) {
 
       s3File
         .on('error', function (err) {
-          rs.emit('error', err);
+          fileCounter -= 1;
+          // rs.emit('error', err);
         });
 
     });
